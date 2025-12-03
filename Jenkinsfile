@@ -20,7 +20,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             environment {
-                SONAR_TOKEN = credentials('sonar-token')  // ID du token dans Jenkins
+                SONAR_TOKEN = credentials('Sonar')  // ID du token dans Jenkins
             }
             steps {
                 withSonarQubeEnv('SonarQube_Server') {
