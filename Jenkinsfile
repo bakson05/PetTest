@@ -23,7 +23,7 @@ pipeline {
                 SONAR_TOKEN = credentials('Sonar')  // ID du token dans Jenkins
             }
             steps {
-                withSonarQubeEnv('SonarQube_Server') {
+                withSonarQubeEnv('SonarQube') {
                     sh """
                         mvn sonar:sonar \
                           -Dsonar.projectKey=users-service \
